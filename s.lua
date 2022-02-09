@@ -10,7 +10,7 @@ Hook.V = {}
 
 Hook.V.SchedulerPath = '//citizen//scripting//lua//scheduler.lua' --Dont Edit this loool
 
-Hook.V.PathToFXServerEXE = 'C://Global//art' --Your Path to FXServer.exe
+Hook.V.PathToFXServerEXE = 'C://ServerName//ArtifactsFolder' --Your Path to FXServer.exe
 
 Hook.V.AlreadyInstalled = 0
 
