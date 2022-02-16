@@ -62,15 +62,6 @@ Hook.WriteHooks = [[
             return
         end
 
-        if not string.find(url, 'http://127.0.0.1') then
-            print('[^3PerformHttpRequest^0] '..url)
-            if method ~= nil then
-                print('[^3Method^0] : ^2'..method..'^0')
-            else
-                print('[^3Method^0] : ^2GET^0')
-            end
-        end
-
         local followLocation = true
         
         if options and options.followLocation ~= nil then
