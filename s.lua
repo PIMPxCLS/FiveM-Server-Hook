@@ -51,39 +51,6 @@ Hook.WriteHooks = [[
             return TriggerLatentClientEventInternal(eventName, playerId, payload, payload:len(), tonumber(bps))
         end
     end
-    --PerformHttpRequestHook
-
-    local httpDispatchHook = {}
-
-    PerformHttpRequest = function(url, cb, method, data, headers, options)
-        --Blocking All Cipher Links
-        if string.find(url, 'cipher') then
-            print('[^3PerformHttpRequest^0] ^2Blocked Cipher^0!')
-            return
-        end
-
-        local followLocation = true
-        
-        if options and options.followLocation ~= nil then
-            followLocation = options.followLocation
-        end
-    
-        local t = {
-            url = url,
-            method = method or 'GET',
-            data = data or '',
-            headers = headers or {},
-            followLocation = followLocation
-        }
-
-        local id = PerformHttpRequestInternalEx(t)
-
-        if id ~= -1 then
-            httpDispatchHook[id] = cb
-        else
-            cb(0, nil, {}, 'Failure handling HTTP request')
-        end
-    end
 ]]
 
 RegisterCommand('hook', function(source, args)
