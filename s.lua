@@ -14,7 +14,7 @@ Hook.V.PathToFXServerEXE = 'C://ServerName//ArtifactsFolder' --Your Path to FXSe
 
 Hook.V.AlreadyInstalled = 0
 
---Here you can Modify Shit that gets Hooked [If you use Payed Scripts maybe Remove the PerformHttpRequest Hook!]
+--Here you can Modify Shit that gets Hooked
 Hook.WriteHooks = [[
     --Made by PIMP_CLS#7979
     --RegisterNetEventHook
